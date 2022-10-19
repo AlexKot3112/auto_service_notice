@@ -21,7 +21,7 @@ class _MainScreenWidgetState extends State<MainScreenWidget> {
         ),
         centerTitle: true,
       ),
-      backgroundColor: Color.fromARGB(255, 11, 55, 202),
+      backgroundColor: const Color.fromARGB(255, 11, 55, 202),
       body: Center(
         child: Column(
           children: [
