@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
 
 class SetSettingsWidget extends StatefulWidget {
-  const SetSettingsWidget({super.key});
+  SetSettingsWidget({super.key});
 
   @override
   State<SetSettingsWidget> createState() => _SetSettingsWidgetState();
 }
 
 class _SetSettingsWidgetState extends State<SetSettingsWidget> {
-  final controller = TextEditingController();
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
+  final controllerOne = TextEditingController();
+  String input = '';
+
+  void save() {
+    controllerOne.addListener(() {
+      input = controllerOne.text;
+    });
+    setState(() {
+      input = controllerOne.text;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     const title = 'Информация';
-  String kilometers = controller.text.toString();
+    
+
     return Material(
       child: Column(
         children: [
@@ -31,15 +37,16 @@ class _SetSettingsWidgetState extends State<SetSettingsWidget> {
             centerTitle: true,
           ),
           TextField(
-            controller: controller,
-            
-            
+            controller: controllerOne,
+            keyboardType: TextInputType.number,
+            onEditingComplete: () => save(),
           ),
           const SizedBox(
             height: 200,
           ),
+          TextButton(onPressed: save, child: const Text('save')),
           Text(
-            'Пробег составил: $kilometers',
+            'Пробег составил: $input',
             style: const TextStyle(color: Colors.black),
           ),
         ],

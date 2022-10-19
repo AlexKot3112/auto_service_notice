@@ -30,7 +30,7 @@ class _AutoServiceAppState extends State<AutoServiceApp> {
         '/': (context) => const MainScreenWidget(),
         '/card': (context) => const ServiceCardWidget(),
         '/gallery': (context) => const MyHomePage(),
-        '/firstsettings': (context) => const SetSettingsWidget(),
+        '/firstsettings': (context) =>  SetSettingsWidget(),
       },
       theme: ThemeData(
           primaryColor: Colors.orange,
