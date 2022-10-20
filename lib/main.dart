@@ -1,11 +1,12 @@
-// import 'package:auto_service_notes/screens/login.dart';
-// import 'package:auto_service_notes/screens/photos.dart';
 import 'package:auto_service_notes/screens/first_car_settings.dart';
 import 'package:auto_service_notes/screens/gallery.dart';
 import 'package:auto_service_notes/screens/mainscreen.dart';
 import 'package:auto_service_notes/screens/servicecard.dart';
-// import 'package:auto_service_notes/screens/servicecard.dart';
 import 'package:flutter/material.dart';
+// import 'dart:async';
+// import 'package:flutter/widgets.dart';
+// import 'package:path/path.dart';
+// import 'package:sqflite/sqflite.dart';
 
 void main() {
   runApp(const AutoServiceApp());
@@ -21,16 +22,15 @@ class AutoServiceApp extends StatefulWidget {
 class _AutoServiceAppState extends State<AutoServiceApp> {
   @override
   Widget build(BuildContext context) {
-    
     const title = 'Auto Service Notice';
 
-    return MaterialApp(      
+    return MaterialApp(
       initialRoute: '/',
       routes: {
         '/': (context) => const MainScreenWidget(),
         '/card': (context) => const ServiceCardWidget(),
         '/gallery': (context) => const MyHomePage(),
-        '/firstsettings': (context) =>  SetSettingsWidget(),
+        '/firstsettings': (context) => const SetSettingsWidget(),
       },
       theme: ThemeData(
           primaryColor: Colors.orange,

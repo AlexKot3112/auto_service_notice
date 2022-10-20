@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SetSettingsWidget extends StatefulWidget {
-  SetSettingsWidget({super.key});
+  const SetSettingsWidget({super.key});
 
   @override
   State<SetSettingsWidget> createState() => _SetSettingsWidgetState();
@@ -23,7 +23,6 @@ class _SetSettingsWidgetState extends State<SetSettingsWidget> {
   @override
   Widget build(BuildContext context) {
     const title = 'Информация';
-    
 
     return Material(
       child: Column(
